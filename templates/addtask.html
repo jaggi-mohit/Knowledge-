@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% extends 'home.html' %}
+{% load static %}
+<head>
+    {% block content %}
+	<title>Add Task+</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/addtask.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+   	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+   	 
+   	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+<br>
+{% if success == 'True' %}
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="h2">
+  <strong>Hey Task is added successfully! </strong> You can add more!
+  </div>
+  <script>
+$(document).ready(function(){
+	$('.container1').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+
+<div class="container1">
+		<h1 align="center" style="font-size: 40px;">Add Task <i class="fas fa-edit"></i></h1><br>
+	<form action="" method="post">
+	{% csrf_token %}
+  <div class="mb-3">
+  	<label for="exampleFormControlInput1" class="form-label">Task Title</label>
+  	<input type="text" class="form-control" id="exampleFormControlInput1" name="taskname" placeholder="Enter Task Title" required='true'>
+	</div>
+	<div class="mb-3">
+  	<label for="exampleFormControlTextarea1" class="form-label">Task Description</label>
+  	<textarea class="form-control" id="exampleFormControlTextarea1" name="taskdesc" rows="5" maxlength="5000"></textarea>
+	</div>
+  <button type="submit" class="btn btn-primary" style="display:inline;">Add Task+</button>
+  
+</form><br>
+<a href="yourtask"><button type="submit" class="btn btn-primary">Your Tasks</button></a>
+</div>
+<br>
+	
+{% endblock %}
+</body>
+
+</html>

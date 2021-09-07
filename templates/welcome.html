@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'home.html' %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    {% block content %}
+    <title>Start Quiz</title>
+    
+</head>
+<body>
+<br>
+    {% if sub == "English" %}<br>
+    <center id="quiz"><h1><a href="{% url 'engquiz' %}">Start Quiz <i class="fas fa-lightbulb"></i></a></h1></center><br><br>
+    {% endif %}
+    {% if sub == "Computer" %}
+    <center id="quiz"><h1><a href="{% url 'compquiz' %}">Start Quiz <i class="fas fa-lightbulb"></i></a></h1></center><br><br>
+    {% endif %}
+    {% if sub == "Science" %}
+    <center id="quiz"><h1><a href="{% url 'sciquiz' %}">Start Quiz <i class="fas fa-lightbulb"></i></a></h1></center><br><br>
+    {% endif %}
+    <p><h3><center >Kindly Go Through The Below Instructions Before Starting The Quiz!</h3></center><br>
+    <un><center id="li">
+    
+    <li style="font-size:19px;">Answer Once Submitted Cannot be Changed.</li><br>
+    <li style="font-size:19px;">Refreshing While Giving Quiz May bring Wrong Results.</li><br>
+    <li style="font-size:19px;">Skiping The Question is Not Availaible.</li><br>
+    <li style="font-size:19px;">No Negative Marking Is There.</li></center><p><br>
+</body>
+{% endblock %}
+</html>

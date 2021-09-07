@@ -1,0 +1,20 @@
+.body{
+	background-color: skyblue;
+	font-family: 'New Tegomin', serif;
+    font-weight:bold;
+}
+.container1{
+	height: 500px;
+	width: 1000px;
+	border:2px solid transparent;
+	border-radius: 20px;
+	margin-left: 170px;
+	margin-top: 120px;
+	background-color: white;
+	position: static;
+	}
+
+#h2{
+	margin-top: 95px;
+}
+	

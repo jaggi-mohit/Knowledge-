@@ -1,0 +1,55 @@
+<html>
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}{{ results.word | title }} | Definition of {{ results.word | title }} by Dictionary{% endblock %}
+{% block img %}<img class="profile-image mb-3 rounded-circle mx-auto" src="{% static 'assets/images/dictionary.png' %}" alt="{{ results.word | title }} | Definition of {{ results.word | title }} by Dictionary" >{% endblock %}
+
+<body>
+{% block content %}
+<br><br><br><br><br>
+<div class="main-wrapper" >
+	    <section class="cta-section theme-bg-light py-5" >
+		    <div class="container text-center" >
+			    <h1 class="heading" style="font-weight:bold;">Dictionary</h1>
+				<div class="intro">Search Your Word Below!</div>
+				
+
+			    <form class="signup-form form-inline justify-content-center pt-3" action="{% url 'src' %}" method="GET">
+                    <div class="form-group">
+                        <label class="sr-only" for="semail">Enter Your Word</label>
+                        <input type="text" id="semail" name="word" class="form-control mr-md-1 semail" placeholder="Enter Your Word" style="width:200px;">
+                    </div>
+                    <button type="submit" class="btn btn-success">Search</button>
+				</form>
+				
+
+		    </div>
+<div  style="background-color:white;margin-left:45px;margin-right:45px;font-size:20px;">
+
+    <h2 align="center"> {{ results.word | title }}</h2>
+    <br>
+    <p>
+        <b style=" margin-left:20px;">Meaning: </b>{{results.meaning}}
+    </p>
+    <br>
+    <p>
+        <b style=" margin-left:20px;">Synonyms: </b>
+        {% for s in se %}
+        <a href="/src?word={{s}}">{{ s }}</a>,
+        {% endfor %}
+       
+    </p>
+    <br>
+    <p>
+        <b style=" margin-left:20px;">Antonyms: </b>
+        {% for a in ae %}
+        <a href="/src?word={{ a }}">{{ a }}</a>,
+        {% endfor %}
+    </p>
+    <br>
+</div>
+<br>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+{% extends 'home.html' %}
+{% load static %}
+<head>
+    {% block content %}
+	<title>Add Task+</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/addtask.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+   	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+   	 
+   	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+<br>
+{% if success == 'True' %}
+
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="h2">
+  <strong>Message Sent successfully! </strong> 
+  </div>
+  <script>
+$(document).ready(function(){
+	$('.container1').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+
+{% if messages %}
+<br>
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert" style=" margin-top:70px;">
+  <strong>{{message}} </strong> 
+  </div>
+  {% endfor %}
+  <script>
+$(document).ready(function(){
+	$('.container1').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+
+
+<div class="container1">
+	
+		<h1 align="center" style="font-size: 40px;">Contact Teacher <i class="fas fa-edit"></i></h1><br>
+		
+		
+		
+	<form action="" method="post">
+	{% csrf_token %}
+    <br><br><br>
+  
+	<div class="mb-3">
+  	<label for="exampleFormControlTextarea1" class="form-label">Message</label>
+  	<textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="6" maxlength="5000"></textarea>
+	</div>
+  <button type="submit" class="btn btn-primary" style="display:inline;margin-left:450px;">Send</button>
+  
+</form><br>
+
+</div>
+<br>
+	
+{% endblock %}
+</body>
+
+</html>

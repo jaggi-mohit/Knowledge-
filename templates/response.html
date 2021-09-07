@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'home.html' %}
+{% load static %}
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tasks</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap\bootstrap-4.6.0-dist\css\bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/yourtask.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<br>
+{% if messages %}
+<br>
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert" style=" margin-top:70px;">
+  <strong>{{message}} </strong> 
+  </div>
+  {% endfor %}
+   <script>
+$(document).ready(function(){
+	$('table').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+    <table class="table table-dark table-striped" >
+
+  <thead>
+    <tr>
+      <th scope="col">Serial No.</th>
+      <th scope="col">Teacher/Subject</th>
+      <th scope="col">Message</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+  {% for student in students %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{student.teacher}}/ [{{student.subjectincharge}}] </td>
+      <td>{{student.message}}</td>
+      <td><a href="{% url 'contact' student.subjectincharge %}" style="color:lightgreen;">Contact </a>   <a href="{% url 'delete' student.id %}" style="margin-left:20px;">  Delete <i class="fa fa-trash"></i></a></td>
+      
+      
+      
+      
+
+      
+      
+    </tr>
+  {% endfor %}
+   
+  </tbody>
+
+</table>
+
+
+</body>
+{% endblock %}
+</html>

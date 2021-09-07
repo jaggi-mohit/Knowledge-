@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+{% extends 'home.html' %}
+{% load static %}
+
+
+<head>
+{% block content %}
+
+	<title>Todo</title>
+     
+	<link rel="stylesheet" type="text/css" href="{% static 'css/todo.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+   	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body >
+<br>
+	<div class="container">
+		<h1  style="font-size: 40px;"> To Do <i class="fas fa-edit"></i></h1>
+		<a href="todo/addtask"><button type="button" id="b1" >Add Task +</button></a>
+		<a href="todo/yourtask"><button type="button" id="b2">Your Tasks <i class="fas fa-tasks"></i></button></a>
+	</div>
+{% endblock %}
+</body>
+</html>
+

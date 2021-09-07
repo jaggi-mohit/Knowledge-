@@ -1,0 +1,410 @@
+		table{
+			table-layout: fixed;
+    		word-wrap: break-word;
+		}
+		#h1{
+			margin-top: 100px;
+		}
+		.img{
+			height: 200px;
+			width: 200px;
+			margin-top: -40px;
+		}
+		nav{
+			display: block;
+			position: fixed;
+			z-index: 3;
+			width: 100%;
+		}
+
+		div.outer{
+			background-color: black;
+			height:120px;
+			
+		}
+
+		.dropdown .dis{
+			font-size: 20px;
+			color: white;
+			font-weight: bold;
+					}
+
+		 .dropdown {
+			display: inline-block;
+
+			position: relative;
+			
+					}
+
+		.dropdown-content {
+			color: white;
+  		display: none;
+  		position: absolute;
+  		background-color: #f1f1f1;
+ 		 min-width: 160px;
+ 		 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 		 z-index: 1;
+ 		
+				}
+		
+        #carouselExampleIndicators{
+            z-index: 1;
+        }
+		.dropdown-content a {
+				
+  		color: black;
+  		padding: 12px 16px;
+ 		 text-decoration: none;
+  		display: block;
+  		
+  		
+		}
+
+		.dropdown-content a:hover {
+			background-color: black;
+			color: skyblue;
+			font-weight: bold;
+			  
+	    }
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+			  
+
+			}
+
+		 .dropdown a:hover{
+ 		color:white;
+ 		text-decoration: none;
+ 		
+ 		color: skyblue;
+
+			 }
+		.dropdown:hover .dropdown-content a {	
+						text-decoration: none;
+						
+
+						}
+
+		li .s2{
+			margin-left: 30px;
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			white-space: nowrap;
+
+
+		}
+
+		li .s2:hover{
+			text-decoration: none;
+			color: white;
+			
+			color: skyblue;
+			 position:relative;
+
+		}
+
+
+		.a1{
+			color: white;
+			text-decoration: none;
+			float: right;
+			margin-top: 40px;
+			border:2px solid white;
+			border-radius: 20px;
+			font-size: 25px;
+			margin-right: 50px;
+		}
+
+		.a2{
+			color: white;
+			text-decoration: none;
+			float: right;
+			margin-top: 40px;
+			border:2px solid white;
+			border-radius: 20px;
+			font-size: 25px;
+			margin-right: 10px;
+
+		}
+
+		
+
+		li{
+		display: inline;
+		}
+
+		.a1:hover{
+			color: green;
+			text-decoration: none;
+			background-color: skyblue;
+			border-color: green;
+			font-weight: bold;
+
+		}
+		.a2:hover{
+			color: green;
+			text-decoration: none;
+			background-color: skyblue;
+			border-color: green;
+			font-weight: bold;
+
+		}
+
+
+.details1{
+    background-image: linear-gradient(120deg,purple,blue,purple);
+	border:2px solid black;
+}
+.details2{
+	background-image: linear-gradient(120deg,brown,grey,black);
+	border:2px solid black;
+}
+.details3{
+	background-image: linear-gradient(120deg,black,brown,black);
+	border:2px solid black;
+}
+.details4{
+	background-image: linear-gradient(120deg,brown,red,brown);
+	border:2px solid black;
+}
+
+#div.popup{
+	border:2px solid red;
+	width:300px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: yellow;
+	color:red;
+}
+#div.triangle{
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 20px solid red;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div.alert{
+	border:2px solid black;
+}
+h5{
+	color: yellow
+}
+
+.body{
+    background-color: skyblue;
+	font-family: 'New Tegomin', serif;
+    font-weight:bold;
+
+}
+.animate{
+	background-image: url("https://wallpaperaccess.com/full/1544215.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#carouselExampleIndicators{
+	width: 1300px;
+	margin-left: 25px;
+	border-radius: 30px;
+	border:2px solid transparent;
+	overflow: hidden;
+
+}
+.slick-prev:before {
+  color: blue!important;
+  background-color: transparent;
+}
+.slick-next:before {
+  color: blue !important;
+  background-color: transparent;
+}
+div.footer{
+	width:100%;
+	margin-top: 70px;
+	background-color: white;
+	height: 200px;
+}
+
+address{
+	text-align: center;
+}
+
+
+
+
+div.an{
+	margin-left: 150px;
+	width:400px;
+	border-radius:500px;
+	border:2px solid white;
+
+}
+.ab{
+	margin-top: 10px;
+	text-align:center;
+	height: 350px;
+	width: 650px;
+	margin-right: 30px;
+	border-radius: 300px;
+	border:8px solid red;
+	background-color: yellow;
+	color: red;
+	display: none;
+}
+
+.c3{
+			margin-left: -200px;
+			width:400px;
+			height: 400px;
+			animation-name: pulse;
+			animation-duration: 10s;
+			animation-delay: 0s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+}
+
+.c4, .c5{
+	margin-left: 150px;
+	width:150px;
+	height: 150px;
+	animation-name:pulser;
+	animation-duration: 5s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+
+}
+
+.outer1{
+	position: fixed;
+	top:0px;
+	z-index: 1;
+	width: 100%;
+}
+#p{
+	display: none;
+}
+
+td a.s2{
+text-decoration: none;
+color: black;
+
+}
+td a.s3{
+	text-decoration: none;
+	color: black;
+	margin-left: 270px;
+	
+	}
+
+td a.s2:hover{
+	color:red;
+
+}
+td a.s3:hover{
+	color:red;
+
+}
+div.qtn{
+	background-color: white;
+	margin-left: 25px;
+	margin-right: 25px;
+	border-radius: 20px;
+}
+@keyframes pulse{
+			0%{
+				transform: translate(-300px,0);
+				
+			}
+			100%{
+				transform: translate(250px,0);
+
+
+				
+			
+			}
+		}
+
+
+#container1{
+	margin-top:97px;
+}
+
+.sub{
+	margin-left:100px;
+}
+
+.textarea{
+	background-color:lightgray;
+	border-radius:10px;
+	margin-left:280px;
+	width:800px;
+	height:200px;
+}
+#s2{
+	margin-left: 30px;
+			
+			font-size: 20px;
+			font-weight: bold;
+			white-space: nowrap;
+}
+
+div .details1, .details2, .details3, .details4, .details5{
+	width:300px;
+	height: 150px;
+}
+
+#slider{
+	width:1290px;
+	margin-left: 28px;
+	margin-right: 0px;
+}
+
+.try{
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.try:hover{
+	text-decoration: none;
+	color: red;
+}
+
+#quiz  {
+	 margin-top:320px;
+	 
+	 
+ }
+
+#quiz a{
+	color: white;
+	background-color:lightslategray;
+	margin:auto;
+	position: absolute;
+	
+	right: 0;
+	left: 0;
+}
+
+#quiz h1 a:hover{
+	text-decoration: none;
+	color: yellow;
+	font-weight: bold;
+}
+center a h3{
+	margin-top: 300px;
+	width: 15%;
+	background-color: rgb(243, 234, 234);
+    color:red;
+}
+
+ center a:hover{
+	text-decoration: none;
+}

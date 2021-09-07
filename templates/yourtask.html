@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'home.html' %}
+{% load static %}
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tasks</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap\bootstrap-4.6.0-dist\css\bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/yourtask.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<br>
+    <table class="table table-dark table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col">Serial No.</th>
+      <th scope="col">Task Title</th>
+      <th scope="col">Task Description</th>
+      <th scope="col">Task Time</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for task in tasks %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{task.tasktitle}}</td>
+      <td>{{task.taskdesc}}</td>
+      <td>{{task.time}}</td>
+      <td><a href="{% url 'del' task.id %}">Delete <i class="fa fa-trash"></i></a></td>
+    </tr>
+  {% endfor %}
+   
+  </tbody>
+
+</table>
+<a href="addtask"><button type="submit" class="btn btn-primary" style="display:inline;">Add Task+</button></a>
+
+</body>
+{% endblock %}
+</html>

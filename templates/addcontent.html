@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+{% extends 'teacherhome.html' %}
+{% load static %}
+<head>
+    {% block content %}
+	<title>Add Task+</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/addtask.css' %}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+   	<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+   	 
+   	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+<br>
+{% if success == 'True' %}
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="h2">
+  <strong>Hey Content is added successfully! </strong> You can add more!
+  </div>
+  <script>
+$(document).ready(function(){
+	$('.container1').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+{% if success == 'False1' %}
+<div class="alert alert-success alert-dismissible fade show" role="alert" id="h2">
+  <strong>Sorry Content is not added ! </strong> You are not authorized contact admin!
+  </div>
+  <script>
+$(document).ready(function(){
+	$('.container1').css('margin-top','0px')
+
+
+})
+</script>
+{% endif %}
+
+<div class="container1" style='height:100%;'>
+		<h1 align="center" style="font-size: 40px;">Add Content <i class="fas fa-edit"></i></h1><br>
+	<form action="" method="post">
+	{% csrf_token %}
+  <div class="mb-3">
+  	<label for="exampleFormControlInput1" class="form-label">Title Of Topic:</label>
+  	<input type="text" class="form-control" id="exampleFormControlInput1" name="titles" placeholder="Enter Title Of The Topic" required='true'>
+	</div>
+    <div class="mb-3">
+  	<label for="exampleFormControlInput1" class="form-label">Youtube Video Link:</label>
+  	<input type="text" class="form-control" id="exampleFormControlInput1" name="videos" placeholder="Add Video Link">
+	</div>
+	<div class="mb-3">
+  	<label for="exampleFormControlTextarea1" class="form-label">Description:</label>
+	  {% if subject == "Computer" %}
+	
+  	
+	 
+		{{forms.media}}
+		{{forms.as_p}}
+	
+	{% endif %}
+  	<textarea class="form-control" id="exampleFormControlTextarea1" name="tdesc" rows="5" maxlength="50000"></textarea>
+	</div>
+	{% if subject == "Computer" %}
+	<div class="mb-3">
+  	
+	 
+		{{form.media}}
+		{{form.as_p}}
+	</div>
+	{% endif %}
+  <button type="submit" class="btn btn-primary" style="display:inline;">Add Content+</button>
+  
+</form><br>
+
+
+
+</div>
+<br>
+	
+{% endblock %}
+</body>
+
+</html>

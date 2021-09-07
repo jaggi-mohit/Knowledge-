@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'teacherhome.html' %}
+{% load static %}
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Tasks</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap\bootstrap-4.6.0-dist\css\bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/yourtask.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<br>
+    <table class="table table-dark table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col" style="width:110px;">Serial No.</th>
+      <th scope="col" style="width:150px;">Topic Title</th>
+      <th scope="col" style="width:170px;">Video Link</th>
+      <th scope="col" style="width:650px;">Topic Description</th>
+      <th scope="col" style="width:100px;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for task in tasks %}
+    <tr>
+      <th scope="row" style="width:10px;">{{forloop.counter}}</th>
+      <td>{{task.title}}</td>
+      <td>{{task.video}}</td>
+      <td >{{task.desc}}</td>
+      <td><a href="" >Delete <i class="fa fa-trash"></i></a></td>
+    </tr>
+  {% endfor %}
+   
+  </tbody>
+
+</table>
+
+
+</body>
+{% endblock %}
+</html>
